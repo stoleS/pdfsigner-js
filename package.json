@@ -1,0 +1,84 @@
+{
+  "name": "pdfsigner-js",
+  "version": "0.1.0",
+  "author": {
+    "name": "Predrag Stosic",
+    "email": "predragstosic29@email.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/username/repository.git"
+  },
+  "main": "./dist/pdfsigner-js.cjs",
+  "module": "./dist/pdfsigner-js.esm.js",
+  "jsdelivr": "./dist/pdfsigner-js.iife.js",
+  "exports": {
+    ".": {
+      "require": "./dist/pdfsigner-js.cjs",
+      "import": "./dist/pdfsigner-js.esm.js",
+      "types": "./dist/pdfsigner-js.d.ts"
+    },
+    "./dist/": {
+      "import": "./dist/",
+      "require": "./dist/",
+      "types": "./dist/"
+    }
+  },
+  "scripts": {
+    "dev": "vite --host",
+    "prebuild": "rm -rf dist/*",
+    "build": "tsc && vite build",
+    "postbuild": "dts-bundle-generator --config ./dts-bundle-generator.config.ts",
+    "test": "vitest",
+    "test:coverage": "vitest --coverage",
+    "format": "prettier . --write",
+    "upgrade": "upgradeps",
+    "release": "npm run build && np"
+  },
+  "bugs": {
+    "url": "https://github.com/stoleS/pdfsigner-js/issues"
+  },
+  "description": "Package description.",
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE.md",
+    "CHANGELOG.md",
+    "src",
+    "package.json"
+  ],
+  "homepage": "https://github.com/stoleS/pdfsigner-js#readme",
+  "keywords": [
+    "some",
+    "keywords"
+  ],
+  "license": "MIT",
+  "private": false,
+  "type": "module",
+  "types": "./dist/pdfsigner-js.d.ts",
+  "typesVersions": {
+    "*": {
+      "*": [
+        "./dist/pdfsigner-js.d.ts"
+      ]
+    }
+  },
+  "typings": "./dist/pdfsigner-js.d.ts",
+  "devDependencies": {
+    "@padcom/eslint-config-typescript": "^0.20.1",
+    "@types/jsdom": "27",
+    "@types/node": "25",
+    "@vitest/coverage-v8": "4",
+    "dts-bundle-generator": "9",
+    "jsdom": "28",
+    "lint-staged": "16",
+    "np": "11",
+    "prettier": "3",
+    "terser": "5",
+    "ts-node": "10",
+    "typescript": "5",
+    "upgradeps": "2",
+    "vite": "7",
+    "vitest": "4"
+  }
+}

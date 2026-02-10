@@ -1,0 +1,12 @@
+coverage
+test
+node_modules
+*.log
+.lintstagedrc
+favicon.ico
+vite.config.js
+dts-bundle-generator.config.json
+tsconfig.json
+index.html
+.vscode
+.github
