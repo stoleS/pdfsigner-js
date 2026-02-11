@@ -1,7 +1,7 @@
 const config = {
     entries: [
         {
-            filePath: "./src/index.ts",
+            filePath: "./src/main.ts",
             outFile: "./dist/pdfsigner-js.d.ts",
             noCheck: false,
         },
