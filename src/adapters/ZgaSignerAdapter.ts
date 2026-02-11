@@ -14,10 +14,6 @@ const TEXT_ALIGN_MAP = {
 /**
  * Build a zgapdfsigner SignOption from our typed API.
  *
- * TSA and LTV URLs are NOT rewritten here — that's handled by patching
- * Zga.urlFetch in the ProxyFetchAdapter. This adapter only maps our
- * typed options to zgapdfsigner's SignOption shape.
- *
  * @param options - sign options
  * @param resolved - resolved certificate
  * @returns SignOption

@@ -64,9 +64,11 @@ async function getZgaNamespace(): Promise<ZgaNamespace> {
  */
 // eslint-disable-next-line complexity, max-lines-per-function
 export async function signPdf(options: SignPdfOptions) {
+  // 1. Prepare the certificate for zgapdfsigner
   const [certError, resolved] = resolveCertificate(options.certificate)
   if (certError) return [certError, null]
 
+  // 2. Validate provided options
   const [validationError, validation] = validateSigningOptions(options, resolved.info)
   if (validationError) return [validationError, null]
 
@@ -76,8 +78,10 @@ export async function signPdf(options: SignPdfOptions) {
     }
   }
 
+  // 3. Map the options for zgapdfsigner
   const signOption = buildSignOption(options, resolved)
 
+  // 4. Patch the internal zgapdfsigner fetch
   const zga = await getZgaNamespace()
   let restoreUrlFetch: (() => void) | undefined
 
