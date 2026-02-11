@@ -1,6 +1,7 @@
 # pdfsigner-js
 
 ## Example usage
+### Invisible
 ```typescript
 const [error, result] = await signPdf({
     pdf: pdfData,
@@ -11,6 +12,7 @@ const [error, result] = await signPdf({
     },
 })
 ```
+### Visible
 ```typescript
 const [error, result] = await signPdf({
     pdf: pdfData,
