@@ -44,7 +44,6 @@
     "README.md",
     "LICENSE.md",
     "CHANGELOG.md",
-    "src",
     "package.json"
   ],
   "homepage": "https://github.com/stoleS/pdfsigner-js#readme",
