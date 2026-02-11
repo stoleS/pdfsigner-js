@@ -5,9 +5,14 @@
     "name": "Predrag Stosic",
     "email": "predragstosic29@email.com"
   },
+
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/username/repository.git"
+    "url": "git+https://github.com/stoleS/pdfsigner-js.git"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org",
+    "access": "public"
   },
   "main": "./dist/pdfsigner-js.cjs",
   "module": "./dist/pdfsigner-js.esm.js",
@@ -17,11 +22,6 @@
       "require": "./dist/pdfsigner-js.cjs",
       "import": "./dist/pdfsigner-js.esm.js",
       "types": "./dist/pdfsigner-js.d.ts"
-    },
-    "./dist/": {
-      "import": "./dist/",
-      "require": "./dist/",
-      "types": "./dist/"
     }
   },
   "scripts": {
@@ -38,7 +38,17 @@
   "bugs": {
     "url": "https://github.com/stoleS/pdfsigner-js/issues"
   },
-  "description": "Package description.",
+  "description": "Browser-friendly PDF signing library wrapping zgapdfsigner with support for SES and AES signature levels",
+  "keywords": [
+    "pdf",
+    "digital-signature",
+    "pdf-signing",
+    "ses",
+    "aes",
+    "qes",
+    "electronic-signature",
+    "zgapdfsigner"
+  ],
   "files": [
     "dist",
     "README.md",
@@ -47,10 +57,6 @@
     "package.json"
   ],
   "homepage": "https://github.com/stoleS/pdfsigner-js#readme",
-  "keywords": [
-    "some",
-    "keywords"
-  ],
   "license": "MIT",
   "private": false,
   "type": "module",
