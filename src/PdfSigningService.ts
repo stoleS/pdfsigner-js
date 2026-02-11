@@ -25,6 +25,9 @@ let zgaNs: ZgaNamespace | undefined
 
 /**
  * Resolve the Zga namespace object, handling both CJS and ESM import shapes.
+ * We need this to be able to patch the urlFetch method that is available in runtime.
+ *
+ * @returns zgaNs
  */
 async function getZgaNamespace(): Promise<ZgaNamespace> {
   if (!zgaNs) {
